@@ -31,10 +31,30 @@
 
         .update-info {
             background-color: #fff;
-            padding: 20px;
+            padding: 40px; /* Increase the padding to increase the size */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
+            max-width: 800px; /* Set a maximum width for better readability */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -54,11 +74,11 @@
 
     <script>
         const updateInfo = {
-            majorVersion: 1,
+            majorVersion: 0,
             minorVersion: 0,
             patchVersion: 0,
             updateLink: "https://github.com/Muhammad-Ibn-E-Khalid/SMP-Web/archive/master.zip",
-            mandatoryUpdate: false,
+            mandatoryUpdate: false
         };
 
         document.getElementById("majorVersion").innerText = updateInfo.majorVersion;
