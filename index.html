@@ -62,14 +62,13 @@
     <div class="update-info">
         <h1>Update Information</h1>
         <p>Here is the information about the latest update:</p>
-        
-        <ul>
-            <li>Major Version: <span id="majorVersion"></span></li>
-            <li>Minor Version: <span id="minorVersion"></span></li>
-            <li>Patch Version: <span id="patchVersion"></span></li>
-            <li>Mandatory Update: <span id="mandatoryUpdate"></span></li>
-            <li>Update Link: <a id="updateLink" href="" target="_blank">Download</a></li>
-        </ul>
+     <ul>
+    <li>Major Version: <span id="majorVersion"></span></li>
+    <li>Minor Version: <span id="minorVersion"></span></li>
+    <li>Patch Version: <span id="patchVersion"></span></li>
+    <li>Mandatory Update: <span id="mandatoryUpdate"></span></li>
+    <li>Update Link: <a id="updateLink" href="" target="_blank">Download</a></li>
+</ul>
     </div>
 
     <script>
@@ -81,11 +80,12 @@
             mandatoryUpdate: false
         };
 
-        document.getElementById("majorVersion").innerText = updateInfo.majorVersion;
-        document.getElementById("minorVersion").innerText = updateInfo.minorVersion;
-        document.getElementById("patchVersion").innerText = updateInfo.patchVersion;
-        document.getElementById("mandatoryUpdate").innerText = updateInfo.mandatoryUpdate ? "Yes" : "No";
-        document.getElementById("updateLink").href = updateInfo.updateLink;
+      document.getElementById("majorVersion").innerText = <%= updateInfo.majorVersion %>;
+    document.getElementById("minorVersion").innerText = <%= updateInfo.minorVersion %>;
+    document.getElementById("patchVersion").innerText = <%= updateInfo.patchVersion %>;
+    document.getElementById("mandatoryUpdate").innerText = <%= updateInfo.mandatoryUpdate ? "Yes" : "No" %>;
+    document.getElementById("updateLink").href = "<%= updateInfo.updateLink %>";
+
     </script>
 </body>
 </html>
