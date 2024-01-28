@@ -1,1 +1,71 @@
-{"majorVersion": 0, "minorVersion": 1, "patchVersion": 0, "updateLink": "https://github.com/Muhammad-Ibn-E-Khalid/SMP-Web/archive/master.zip", "mandatoryUpdate": false}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Update Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .update-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="update-info">
+        <h1>Update Information</h1>
+        <p>Here is the information about the latest update:</p>
+        
+        <ul>
+            <li>Major Version: <span id="majorVersion"></span></li>
+            <li>Minor Version: <span id="minorVersion"></span></li>
+            <li>Patch Version: <span id="patchVersion"></span></li>
+            <li>Mandatory Update: <span id="mandatoryUpdate"></span></li>
+            <li>Update Link: <a id="updateLink" href="" target="_blank">Download</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const updateInfo = {
+            majorVersion: 1,
+            minorVersion: 0,
+            patchVersion: 0,
+            updateLink: "https://github.com/Muhammad-Ibn-E-Khalid/SMP-Web/archive/master.zip",
+            mandatoryUpdate: false,
+        };
+
+        document.getElementById("majorVersion").innerText = updateInfo.majorVersion;
+        document.getElementById("minorVersion").innerText = updateInfo.minorVersion;
+        document.getElementById("patchVersion").innerText = updateInfo.patchVersion;
+        document.getElementById("mandatoryUpdate").innerText = updateInfo.mandatoryUpdate ? "Yes" : "No";
+        document.getElementById("updateLink").href = updateInfo.updateLink;
+    </script>
+</body>
+</html>
